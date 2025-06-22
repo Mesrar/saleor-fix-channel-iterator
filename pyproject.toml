@@ -133,7 +133,7 @@ package-mode = false
   opentelemetry-semantic-conventions = "^0.53b1"
 
     [tool.poetry.dependencies.django]
-    version = "^4.2"
+    version = "^5.2"
     extras = [ "bcrypt" ]
 
     [tool.poetry.dependencies.uvicorn]
