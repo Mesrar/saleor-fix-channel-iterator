@@ -2508,7 +2508,7 @@ class PluginsManager(PaymentInterface):
     def get_all_plugins(self, active_only=False):
         if not self.loaded_all_channels:
             channels = Channel.objects.using(self.database).all()
-            for channel in channels.iterator():
+            for channel in channels.all():
                 self._ensure_channel_plugins_loaded(channel.slug, channel=channel)
             self.loaded_all_channels = True
         return self.get_plugins(active_only=active_only)
